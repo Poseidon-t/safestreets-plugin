@@ -1,0 +1,17 @@
+{
+  "name": "safestreets",
+  "owner": {
+    "name": "Streets & Commons",
+    "email": "hello@streetsandcommons.com"
+  },
+  "metadata": {
+    "description": "SafeStreets walkability and pedestrian safety tools by Streets & Commons."
+  },
+  "plugins": [
+    {
+      "name": "safestreets",
+      "source": "./",
+      "description": "Walkability and pedestrian safety for any US address, from public data."
+    }
+  ]
+}

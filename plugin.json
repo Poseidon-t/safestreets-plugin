@@ -1,0 +1,100 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "safestreets",
+  "version": "1.0.0",
+  "description": "Walkability and pedestrian safety for any US address, from public data.",
+  "author": {
+    "name": "Streets & Commons",
+    "email": "hello@streetsandcommons.com",
+    "url": "https://safestreets.streetsandcommons.com"
+  },
+  "homepage": "https://safestreets.streetsandcommons.com/walkability-api#mcp",
+  "repository": "https://github.com/Poseidon-t/safestreets-plugin",
+  "license": "MIT",
+  "keywords": [
+    "walkability",
+    "pedestrian safety",
+    "real estate",
+    "urban planning",
+    "relocation"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "SafeStreets",
+        "shortDescription": "Walkability for US addresses",
+        "longDescription": "SafeStreets scores how walkable and how safe for walking any US address is, from public data: OpenStreetMap, NHTSA crash records, the US Census, EPA and satellite imagery. Ask about an address, compare places you are choosing between, find walkable neighborhoods in a city or within a home budget, list the roads where pedestrians were killed in a city, or search SafeStreets research for figures you can cite. Every score comes with its four parts (daily errands on foot, street safety, transit, walking comfort) and the metrics behind them. Free, no sign-in.",
+        "developerName": "Streets & Commons",
+        "category": "Lifestyle",
+        "capabilities": [
+          "Read"
+        ],
+        "websiteURL": "https://safestreets.streetsandcommons.com",
+        "supportURL": "https://safestreets.streetsandcommons.com/platform/contact",
+        "privacyPolicyURL": "https://safestreets.streetsandcommons.com/privacy",
+        "termsOfServiceURL": "https://safestreets.streetsandcommons.com/terms",
+        "defaultPrompt": [
+          "Use SafeStreets to tell me how walkable 1200 W Foster Ave, Chicago is.",
+          "Use SafeStreets to find walkable neighborhoods near Philadelphia under $400,000.",
+          "Use SafeStreets to list the roads in Houston where pedestrians were killed."
+        ],
+        "brandColor": "#4A7C6F",
+        "composerIcon": "./assets/logo.png",
+        "logo": "./assets/logo.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Score one address",
+              "prompt": "How walkable is 1200 W Foster Ave, Chicago?",
+              "tools_triggered": "get_walkability_score",
+              "expected_behavior": "Returns a 0-10 score with its tier and the four component scores, and names the address that was matched."
+            },
+            {
+              "description": "Compare two places",
+              "prompt": "Which is better for living without a car: Logan Square, Chicago or The Loop, Chicago?",
+              "tools_triggered": "compare_locations",
+              "expected_behavior": "Ranks both places, gives each score, and says which components differ most."
+            },
+            {
+              "description": "Whole-city score",
+              "prompt": "How walkable is Houston as a city?",
+              "tools_triggered": "get_city_walkability",
+              "expected_behavior": "Returns Houston's precomputed 0-10 score, tier and four components with a link to the city page."
+            },
+            {
+              "description": "Dangerous roads in a city",
+              "prompt": "Which roads in Houston have had the most pedestrian deaths?",
+              "tools_triggered": "get_dangerous_corridors",
+              "expected_behavior": "Lists Houston road corridors with total pedestrian deaths and a per-year breakdown, citing NHTSA FARS."
+            },
+            {
+              "description": "Where to move on a budget",
+              "prompt": "Find walkable neighborhoods in Pennsylvania where the median home is under $400,000.",
+              "tools_triggered": "search_neighborhoods",
+              "expected_behavior": "Returns ranked neighborhoods with median home value, walkability index and commute shares, all under $400,000."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Driving directions",
+              "prompt": "Give me driving directions from Chicago to Milwaukee."
+            },
+            {
+              "description": "Crime statistics",
+              "prompt": "What is the crime rate on my street?"
+            },
+            {
+              "description": "Unrelated booking",
+              "prompt": "Book me a hotel in New York for next weekend."
+            }
+          ]
+        }
+      },
+      "publication": {
+        "release_notes": "First release: eight read-only tools for walkability scores, place comparison, neighborhood search, pedestrian fatality corridors and SafeStreets research."
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "safestreets",
+  "version": "1.0.0",
+  "description": "Walkability and pedestrian safety for any US address, from public data: scores, neighborhood search, roads where pedestrians were killed, and SafeStreets research.",
+  "author": {
+    "name": "Streets & Commons",
+    "email": "hello@streetsandcommons.com",
+    "url": "https://safestreets.streetsandcommons.com"
+  },
+  "homepage": "https://safestreets.streetsandcommons.com/walkability-api#mcp",
+  "repository": "https://github.com/Poseidon-t/safestreets-plugin",
+  "license": "MIT",
+  "keywords": ["walkability", "pedestrian safety", "real estate", "urban planning", "relocation", "vision zero"]
+}

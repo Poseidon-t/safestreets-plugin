@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "safestreets": {
+      "type": "http",
+      "url": "https://safestreets.streetsandcommons.com/mcp"
+    }
+  }
+}
