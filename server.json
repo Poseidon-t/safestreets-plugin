@@ -1,0 +1,27 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Poseidon-t/safestreets",
+  "title": "SafeStreets",
+  "description": "Walkability and pedestrian safety for any US address: scores, neighborhoods, deadly roads.",
+  "version": "1.0.0",
+  "websiteUrl": "https://safestreets.streetsandcommons.com/walkability-api#mcp",
+  "repository": {
+    "url": "https://github.com/Poseidon-t/safestreets-plugin",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/Poseidon-t/safestreets-plugin/main/.claude-plugin/icon.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://safestreets.streetsandcommons.com/mcp"
+    }
+  ]
+}
