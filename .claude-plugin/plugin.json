@@ -10,5 +10,13 @@
   "homepage": "https://safestreets.streetsandcommons.com/walkability-api#mcp",
   "repository": "https://github.com/Poseidon-t/safestreets-plugin",
   "license": "MIT",
-  "keywords": ["walkability", "pedestrian safety", "real estate", "urban planning", "relocation", "vision zero"]
+  "keywords": [
+    "walkability",
+    "pedestrian safety",
+    "real estate",
+    "urban planning",
+    "relocation",
+    "vision zero"
+  ],
+  "privacyPolicyUrl": "https://safestreets.streetsandcommons.com/privacy"
 }
