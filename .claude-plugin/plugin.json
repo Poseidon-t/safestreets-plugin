@@ -1,5 +1,6 @@
 {
   "name": "safestreets",
+  "displayName": "SafeStreets",
   "version": "1.0.0",
   "description": "Walkability and pedestrian safety for any US address, from public data: scores, neighborhood search, roads where pedestrians were killed, and SafeStreets research.",
   "author": {
@@ -18,5 +19,8 @@
     "relocation",
     "vision zero"
   ],
-  "privacyPolicyUrl": "https://safestreets.streetsandcommons.com/privacy"
+  "privacyPolicyUrl": "https://safestreets.streetsandcommons.com/privacy",
+  "documentationUrl": "https://github.com/Poseidon-t/safestreets-plugin#readme",
+  "supportUrl": "mailto:hello@streetsandcommons.com",
+  "termsOfServiceUrl": "https://safestreets.streetsandcommons.com/terms"
 }
